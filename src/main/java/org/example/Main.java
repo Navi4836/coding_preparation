@@ -18,6 +18,7 @@ public class Main {
         System.out.println(list.getLast());
         System.out.println(list.removeFirst());
 
+        list.sort(Comparator.comparing(String::length));
 
         Employee alice = new Employee("Alice", 1000, "IT");
         Employee bob = new Employee("Bob", 7500, "Finance");

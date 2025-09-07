@@ -1,6 +1,6 @@
 plugins {
-    /*id("org.springframework.boot") version "3.2.0"
-    id("io.spring.dependency-management") version "1.1.4"*/
+    id("org.springframework.boot") version "3.5.0"
+    id("io.spring.dependency-management") version "1.1.4"
     id("java")
 }
 
@@ -16,12 +16,12 @@ repositories {
 }
 
 dependencies {
-   /* implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-web")
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")*/
+    testImplementation("org.junit.jupiter:junit-jupiter")
 }
 
-/*
+
 tasks.test {
     useJUnitPlatform()
-}*/
+}

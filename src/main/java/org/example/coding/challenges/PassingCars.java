@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class PassingCars {
     public static void main(String[] args) {
-        int[] cars = {1, 0, 1, 1, 1};
+        int[] cars = {0, 1, 0, 1, 1};
         // (0,1), (0, 3), (0, 4), (2, 3), (2, 4)
         int passingCars = 0;
         int eastBoundCarsSeen = 0;
