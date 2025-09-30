@@ -22,7 +22,7 @@ public class ValidParenthesisWildCard {
 
     public static void main(String[] args) {
         ValidParenthesisWildCard vp = new ValidParenthesisWildCard();
-        String str = "{{}}***{";
+        String str = "{{}}****{";
         System.out.println(vp.validParenthesis(str));
     }
 }

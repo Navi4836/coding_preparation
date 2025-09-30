@@ -32,7 +32,7 @@ public class RotateArrayRight {
         reverse(array, k, length - 1);
     }
 
-    // rotate right
+    // rotate left
     public static void rotateLeft(int[] array, int length, int k) {
         reverse(array, k, length - 1);
         reverse(array, 0, k - 1);

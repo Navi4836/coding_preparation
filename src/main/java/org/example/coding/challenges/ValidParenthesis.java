@@ -7,6 +7,7 @@ public class ValidParenthesis {
         System.out.println(S);
         Stack<Character> stack = new Stack<>();
         for (char c : S.toCharArray()) {
+            stack.search("}");
             if (c == '{') {
                 stack.push('}');
             } else if (c == '(') {

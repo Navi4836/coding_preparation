@@ -25,6 +25,7 @@ public class ConcurrentLRUWithEvictLock<K, V> {
         if (value != null) {
             // Append an access record. We DON'T remove existing occurrences (cheap).
             accessOrder.addLast(key);
+            accessOrder.remove(key);
         }
         return value;
     }
@@ -76,6 +77,32 @@ public class ConcurrentLRUWithEvictLock<K, V> {
     // Optional helper for tests / debugging — not strictly accurate under concurrency
     public String debugAccessOrderSnapshot() {
         return accessOrder.toString();
+    }
+
+    public static void main(String[] args) {
+        ConcurrentLRUWithEvictLock<Integer, Integer> lru = new ConcurrentLRUWithEvictLock<>(10);
+
+        for (int i = 1; i <= 10; i++) {
+            lru.put(i, i);
+        }
+        System.out.println(lru.map);
+
+        lru.get(1);
+        lru.get(2);
+        lru.get(3);
+        lru.get(4);
+        lru.get(5);
+        lru.get(6);
+        lru.get(7);
+        lru.get(8);
+        lru.get(9);
+        lru.get(10);
+        lru.get(1);
+        lru.get(8);
+
+        System.out.println(lru.size());
+        System.out.println(lru.accessOrder);
+
     }
 }
 

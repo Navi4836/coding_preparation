@@ -25,6 +25,8 @@ public class Main {
         Employee chris = new Employee("Chris", 6000, "IT");
         Employee david = new Employee("David", 5000, "Finance");
 
+        Comparator<Employee> salaryComparator = Comparator.comparingInt(Employee::getSalary);
+
         List<Employee> employeeList = Arrays.asList(alice, bob, chris, david);
         Map<String, Long> groupedByDepartment = employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartment, Collectors.summingLong(Employee::getSalary)));
 
